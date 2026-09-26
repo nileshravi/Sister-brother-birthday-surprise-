@@ -1215,4 +1215,114 @@ button {
 /* Candle stays above cake */
 .candle {
   position: absolute;
-  z
+  z-index: 15;
+  top: 45px;
+       }
+/* 💌 Letter starts completely hidden */
+.letter-text p {
+  visibility: hidden;
+}
+/* 🔐 PASSWORD SCREEN */
+
+.password-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at top, rgba(255, 105, 180, 0.22), transparent 40%),
+    linear-gradient(135deg, #170719, #3b0d35, #18091c);
+}
+
+.password-box {
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+
+  padding: 40px 28px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 28px;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.lock-icon {
+  font-size: 58px;
+  margin-bottom: 15px;
+}
+
+.password-box h1 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.password-box p {
+  color: #f5ddea;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+#passwordInput {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px 18px;
+  margin: 12px 0;
+
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 14px;
+
+  background: rgba(255,255,255,.12);
+  color: white;
+
+  font-size: 16px;
+  outline: none;
+}
+
+#passwordInput::placeholder {
+  color: #e8cddd;
+}
+
+#unlockBtn {
+  width: 100%;
+
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #ff4fa3, #d832e8);
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 25px rgba(255, 64, 170, .35);
+}
+
+#unlockBtn:active {
+  transform: scale(.97);
+}
+
+#passwordError {
+  min-height: 24px;
+  margin-bottom: 0;
+  color: #ffb3d9;
+  font-size: 15px;
+}
