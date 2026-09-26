@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>A Special Birthday Surprise ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 🔐 PASSWORD SCREEN -->
+<div id="passwordScreen" class="password-screen">
+  <div class="password-box">
+    <div class="lock-icon">🔐</div>
+
+    <h1>A Little Surprise For You ❤️</h1>
+
+    <p>Enter the secret password to unlock your surprise 💌</p>
+
+    <input
+      type="password"
+      id="passwordInput"
+      placeholder="Enter Password"
+    >
+
+    <button id="unlockBtn">Unlock My Surprise 💕</button>
+
+    <p id="passwordError"></p>
+  </div>
+</div>
+
+  <!-- =========================================
+       STEP 1 — IMPORTANT QUESTION
+       ========================================= -->
+
+  <section id="questionScreen" class="screen question-screen">
+
+    <div class="question-card">
+
+      <div id="questionEmoji" class="big-emoji">
+        🥺
+      </div>
+
+      <h1 id="questionTitle">
+        Ek important question... 👀
+      </h1>
+
+      <p id="questionText">
+        Kya tum apna special surprise dekhne ke liye ready ho? 🎁✨
+      </p>
+
+      <div class="question-buttons">
+
+        <button id="yesBtn"
+          onclick="document.getElementById('introMusic').play()"
+        >
+          
+          YES 😍
+        </button>
+
+        <button id="noBtn">
+          NO 😒
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       STEP 2 — BIRTHDAY INTRO
+       ========================================= -->
+
+  <section
+    id="birthdayScreen"
+    class="screen birthday-screen hidden"
+  >
+
+    <div class="floating-balloons">
+      <span>🎈</span>
+      <span>🎈</span>
+      <span>🎈</span>
+      <span>🎈</span>
+      <span>🎈</span>
+    </div>
+
+    <div class="birthday-content">
+
+      <p class="small-heading">
+        Today is all about you ✨
+      </p>
+
+      <h1 class="birthday-title">
+        HAPPY<br>
+        <span>BIRTHDAY</span>
+      </h1>
+
+      <h2>
+        Beautiful Soul ❤️
+      </h2>
+
+      <p class="birthday-message">
+        A little surprise made especially for you... 🫶🏻
+      </p>
+
+      <button id="startCakeBtn" class="main-button">
+        Continue 💖
+      </button>
+
+    </div>
+
+  </section>
+
+
+<!-- =========================================
+     STEP 3 — CAKE CUTTING
+     ========================================= -->
+
+<section
+  id="cakeScreen"
+  class="screen cake-screen hidden"
+>
+
+  <div class="cake-content">
+
+    <p class="small-heading">
+      Before anything else... 🎂
+    </p>
+
+    <h2>
+      Let's Cut The Cake! 🎉
+    </h2>
+
+    <div class="cake-area">
+
+      <!-- Candle -->
+      <div class="candle">
+        <div class="flame">🔥</div>
+      </div>
+
+      <!-- Cake -->
+      <div id="cake" class="cake">
+
+        <div class="cake-half cake-left">
+
+          <div class="cake-top"></div>
+          <div class="cake-cream"></div>
+          <div class="cake-base"></div>
+
+        </div>
+
+        <div class="cake-half cake-right">
+
+          <div class="cake-top"></div>
+          <div class="cake-cream"></div>
+          <div class="cake-base"></div>
+
+        </div>
+
+      </div>
+
+      <!-- Knife -->
+      <div id="knife" class="knife">
+        🔪
+      </div>
+
+    </div>
+
+    <p id="cakeStatus" class="cake-status">
+      Make a wish... ✨
+    </p>
+
+    <!-- CUT BUTTON -->
+    <button id="cutCakeBtn" class="main-button">
+      🔪 Cut The Cake
+    </button>
+
+    <!-- NEXT BUTTON -->
+    <button
+      id="continueAfterCake"
+      class="main-button hidden"
+    >
+      Continue to Your Surprise 💌
+    </button>
+
+  </div>
+
+</section>
+
+  <!-- =========================================
+       STEP 4 — SMALL PINK ENVELOPE
+       ========================================= -->
+
+  <section
+    id="envelopeScreen"
+    class="screen envelope-screen hidden"
+  >
+
+    <div class="envelope-content">
+
+      <p class="small-heading">
+        There's something waiting for you... 💌
+      </p>
+
+      <h2>
+        A Little Message
+      </h2>
+
+
+      <div
+        id="smallEnvelope"
+        class="small-envelope"
+      >
+
+        <div class="envelope-back"></div>
+
+        <div class="envelope-paper">
+          💌
+        </div>
+
+        <div class="envelope-flap"></div>
+
+        <div class="envelope-front">
+
+          <div class="envelope-heart">
+            ❤️
+          </div>
+
+          <button
+           id="openEnvelopeBtn"
+           class="envelope-open-btn"
+           >
+           Tap to Open 💌
+           </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Message appears AFTER opening -->
+
+      <div
+        id="smallMessage"
+        class="small-message hidden"
+      >
+
+        <h3>
+          A Little Message For You 💕
+        </h3>
+
+        <p>
+          Some people come into our lives
+          and quietly make everything
+          a little more beautiful. ✨
+        </p>
+
+        <p>
+          You are one of those special people
+          who deserve all the happiness
+          in the world. ❤️
+        </p>
+
+        <button
+          id="memoriesBtn"
+          class="main-button"
+        >
+          See Our Memories 📸
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       STEP 5 — MEMORIES
+       ========================================= -->
+
+  <section
+    id="memoriesScreen"
+    class="screen memories-screen hidden"
+  >
+
+    <div class="memories-content">
+
+      <p class="small-heading">
+        A Few Beautiful Memories 📸
+      </p>
+
+      <h2>
+        Moments I Would Never Forget ❤️
+      </h2>
+
+
+      <div
+        id="memoryContainer"
+        class="memory-container"
+        data-current="0"
+      >
+
+        <!-- PHOTO 1 -->
+
+        <div class="memory-slide active">
+
+          <img
+            src="photo1.jpg"
+            alt="Memory 1"
+          >
+
+          <p>
+            Every beautiful story has a beginning... ✨<br>
+            And this is one of my favourite memories. ❤️
+          </p>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="memory-slide">
+
+          <video
+            src="photo2.jpg.mp4"
+            controls
+            autoplay
+            loop
+            muted
+            playsinline
+            style="width:100%; border-radius:18px;"
+         ></video>
+
+          <p>
+            Some moments are simple,<br>
+            yet they stay forever. 🫶🏻✨
+          </p>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="memory-slide">
+
+          <img
+            src="photo3.jpg"
+            alt="Memory 3"
+          >
+
+          <p>
+            With you, even ordinary moments<br>
+            somehow become special. 💕
+          </p>
+
+        </div>
+
+
+        <!-- PHOTO 4 -->
+
+        <div class="memory-slide">
+
+          <img
+            src="photo4.jpg"
+            alt="Memory 4"
+          >
+
+          <p>
+            The childhood memories,<br>
+            only i have... 😂❤️
+          </p>
+
+        </div>
+
+
+        <!-- PHOTO 5 -->
+
+        <div class="memory-slide">
+
+          <img
+            src="photo5.jpg"
+            alt="Memory 5"
+          >
+
+          <p>
+            Time passes,<br>
+            but beautiful memories stay. 💖
+          </p>
+
+        </div>
+
+
+        <!-- PHOTO 6 -->
+
+        <div class="memory-slide">
+
+          <img
+            src="photo6.jpg"
+            alt="Memory 6"
+          >
+
+          <p>
+            Some people become<br>
+            a beautiful part of your life. 🫶🏻
+          </p>
+
+        </div>
+
+
+        <!-- PHOTO 7 -->
+
+        <div class="memory-slide">
+
+          <video
+            src="photo7.jpg.mp4"
+            controls
+            autoplay
+            loop
+            muted
+            playsinline
+            style="width:100%; border-radius:18px;"
+         ></video>
+          
+          <p>
+            Here's to all the smiles,<br>
+            chaos and little moments. 🥹💕
+          </p>
+
+        </div>
+
+
+        <!-- PHOTO 8 -->
+
+        <div class="memory-slide">
+
+          <img
+            src="photo8.jpg"
+            alt="Memory 8"
+          >
+
+          <p>
+            And if you think this is the end... ❤️<br>
+            There's still one more surprise. 💌✨
+          </p>
+
+        </div>
+
+      </div>
+
+      <p class="song-note">
+  🎵 This song is just for you… because some feelings are better felt through music. ❤️
+      </p>
+      
+      <!-- Dooron Dooron Video -->
+      <div class="dooron-video">
+        <iframe
+          id="dooronMusic"
+          width="100%"
+          height="220"
+          src=""
+          title="Dooron Dooron"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      
+      <button
+        type="button"
+        id="nextMemoryBtn"
+        class="main-button"
+        onclick="nextMemoryDirect()"
+      >
+        Next Memory → ✨
+      </button>
+
+      <script>
+function nextMemoryDirect() {
+
+  const slides =
+    document.querySelectorAll(".memory-slide");
+
+  const button =
+    document.getElementById("nextMemoryBtn");
+
+  let current =
+    parseInt(
+      document
+        .getElementById("memoryContainer")
+        .getAttribute("data-current") || "0"
+    );
+
+
+  /* NEXT PHOTO */
+
+  if (current < slides.length - 1) {
+
+    /* Hide current photo */
+
+    slides[current].style.display = "none";
+
+
+    /* Move to next */
+
+    current++;
+
+
+    /* Show next photo */
+
+    slides[current].style.display = "block";
+
+
+    /* Save current number */
+
+    document
+      .getElementById("memoryContainer")
+      .setAttribute(
+        "data-current",
+        current
+      );
+
+
+    /* Last photo */
+
+    if (current === slides.length - 1) {
+
+      button.innerHTML =
+        "Open One Last Surprise 💌";
+
+    } else {
+
+      button.innerHTML =
+        "Next Memory → ✨";
+
+    }
+
+
+    /* Scroll */
+
+    slides[current].scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+  }
+
+  /* AFTER PHOTO 8 */
+
+  else {
+
+    const memoriesScreen =
+      document.getElementById(
+        "memoriesScreen"
+      );
+
+    const letterEnvelopeScreen =
+      document.getElementById(
+        "letterEnvelopeScreen"
+      );
+
+
+    if (memoriesScreen) {
+      memoriesScreen.classList.add("hidden");
+    }
+
+    if (letterEnvelopeScreen) {
+
+      letterEnvelopeScreen.classList.remove(
+        "hidden"
+      );
+
+      setTimeout(() => {
+
+        letterEnvelopeScreen.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }, 100);
+
+    }
+
+  }
+
+}
+      </script>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       STEP 6 — BIG ENVELOPE
+       ========================================= -->
+
+  <section
+    id="letterEnvelopeScreen"
+    class="screen letter-envelope-screen hidden"
+  >
+
+    <div class="letter-envelope-content">
+
+      <p class="small-heading">
+        One last little surprise... 💌
+      </p>
+
+      <h2>
+        Something From My Heart
+      </h2>
+
+
+      <div
+        id="bigEnvelope"
+        class="big-envelope"
+      >
+
+        <div class="big-envelope-paper">
+          💌
+        </div>
+
+        <div class="big-envelope-flap"></div>
+
+        <div class="big-envelope-body">
+
+          <span>
+            ❤️
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <button
+        type="button"
+        id="openLetterBtn"
+        class="main-button"
+        onclick="openBigEnvelopeDirect()"
+      >
+        Open My Letter 💌
+      </button>
+      <script>
+    function openBigEnvelopeDirect() {
+
+       const envelope =
+         document.getElementById("bigEnvelope");
+
+       const letterScreen =
+         document.getElementById("letterScreen");
+
+       const button =
+         document.getElementById("openBigLetterBtn");
+
+
+  /* 💌 OPEN ENVELOPE */
+
+       if (envelope) {
+         envelope.classList.add("open");
+       }
+
+       if (button) {
+         button.style.display = "none";
+       }
+
+
+  /* ❤️ SHOW LETTER */
+
+       setTimeout(() => {
+
+         const envelopeScreen =
+           document.getElementById(
+             "letterEnvelopeScreen"
+           );
+
+         if (envelopeScreen) {
+           envelopeScreen.classList.add("hidden");
+         }
+
+         if (letterScreen) {
+
+           letterScreen.classList.remove("hidden");
+
+           setTimeout(() => {
+
+             letterScreen.scrollIntoView({
+               behavior: "smooth",
+               block: "start"
+             });
+
+           }, 100);
+
+         }
+
+       }, 1300);
+
+     }
+      </script>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+     STEP 7 — PERSONAL LETTER
+     ========================================= -->
+
+<section
+  id="letterScreen"
+  class="screen letter-screen hidden"
+>
+
+  <div class="letter-card">
+
+    <div class="letter-icon">
+      💗
+    </div>
+
+    <h2>
+      A Little Letter For You
+    </h2>
+
+    <div class="letter-text">
+
+      <p>
+        Hey beautiful soul... ❤️
+      </p>
+
+      <p>
+        Today is your day, but somehow I feel like
+        I am the lucky one for having you in my life. ✨
+      </p>
+
+      <p>
+        We have laughed, fought, annoyed each other,
+        shared countless little moments and created
+        memories that I will always keep close to my heart. 🫶🏻
+      </p>
+
+      <p>
+        Sometimes I hurt you, and I make you cry...
+        Sometimes I tease you, and then again I make you cry...
+        And always my Overthinking hurt uhh a lot and make you cry 😓
+        But at my inner side I always want to see you happy
+        and close to me, stay with me, not with silence and not with another one 
+        falling into someone's trap . 💞
+      </p>
+
+      <p>
+        You may not always realize it,
+        but your presence makes things a little brighter.
+        Your smile, your silly moments and even your
+        little anger have their own special place. 💕
+      </p>
+
+      <p>
+        On your birthday, I just want you to know
+        that you deserve all the happiness,
+        love and beautiful moments this world can offer. 🌸
+      </p>
+
+      <p>
+        Keep smiling. Keep shining.
+        And never stop being the beautiful person you are. ✨
+      </p>
+
+      <p class="letter-ending">
+        Happy Birthday once again! 🎂❤️<br>
+        Stay happy, stay amazing... always. 🫶🏻
+      </p>
+
+    </div>
+
+    <p class="letter-signature">
+      With lots of love ❤️
+    </p>
+
+    <button
+      type="button"
+      id="finishLetterBtn"
+      class="main-button"
+    >
+      One Last Surprise 🎉
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     STEP 8 — FINAL BIRTHDAY
+     ========================================= -->
+
+<section
+  id="finalScreen"
+  class="screen final-screen hidden"
+>
+
+  <div class="final-content">
+
+    <div class="final-cake">
+      🎂
+    </div>
+
+    <p class="final-small">
+      AND ONCE AGAIN...
+    </p>
+
+    <h1>
+      HAPPY<br>
+      <span>BIRTHDAY!</span>
+    </h1>
+
+    <p class="final-message">
+      May your life always be filled with happiness,
+      love, beautiful memories and endless reasons
+      to smile. ❤️✨
+    </p>
+
+    <div class="final-emojis">
+      💖 ✨ 🥳 💕 🎉
+    </div>
+
+    <p class="final-sign">
+      Made especially for someone very special 🫶🏻
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+<audio id="introMusic" loop>
+  <source src="opening-music.mp3" type="audio/mpeg">
+</audio>
+  
+</body>
+
+</html>
