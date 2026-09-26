@@ -843,7 +843,7 @@ if (memoriesBtn) {
 
     if (dooronMusic) {
       dooronMusic.src =
-        "https://www.youtube.com/embed/LV_wiOhO40Q?autoplay=1&loop=1&playlist=LV_wiOhO40Q";
+        "https://www.youtube.com/embed/l_8KzlYBY_8?autoplay=1&loop=1&playlist=l_8KzlYBY_8";
     }
   });
 }
